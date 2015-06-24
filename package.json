@@ -1,22 +1,18 @@
 {
-  "name": "swiper",
-  "version": "3.0.8",
+  "name": "iso-swiper",
+  "version": "0.0.1",
   "description": "iDangerous slider wrapped for isomorphic implementation",
-  "main": "index.min.js",
-  "files": ["dist", "src", "*.json", "*.js"],
+  "main": "index.js",
+  "files": ["*.js"],
   "repository": {
     "type": "git",
     "url": "https://github.com/kfwerf/Swiper.git"
   },
   "keywords": ["swiper", "swipe", "slider", "touch", "ios", "mobile", "cordova", "phonegap", "app", "framework", "carousel", "gallery", "react", "isomorphic", "node"],
-  "author": "Vladimir Kharlampidi",
+  "author": "Kenneth van der Werf",
   "license": [
     "MIT"
   ],
-  "bugs": {
-    "url": "https://github.com/nolimits4web/Swiper/issues"
-  },
-  "homepage": "http://www.idangero.us/swiper/",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -38,6 +34,5 @@
   },
   "scripts": {
     "test": "gulp"
-  },
-  "style": "index.min.css"
+  }
 }
