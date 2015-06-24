@@ -23,9 +23,9 @@
                 scripts: 'build/js/'
             },
             dist: {
-                root: 'dist/',
-                styles: 'dist/css/',
-                scripts: 'dist/js/'
+                root: '',
+                styles: '',
+                scripts: ''
             },
             playground: {
                 root: 'playground/'
@@ -37,7 +37,7 @@
             },
         },
         swiper = {
-            filename: 'swiper',
+            filename: 'index',
             jsFiles: [
                 'src/js/wrap-start.js',
                 'src/js/swiper-intro.js',
@@ -59,6 +59,7 @@
                 'src/js/dom.js',
                 'src/js/dom-plugins.js',
                 'src/js/wrap-end.js',
+                'src/js/node-mock.js',
                 'src/js/amd.js'
             ],
             jQueryFiles : [
@@ -210,7 +211,7 @@
             .pipe(sourcemaps.write('./maps'))
             .pipe(gulp.dest(paths.dist.scripts));
 
-        gulp.src([paths.build.scripts + swiper.filename + '.jquery.js'])
+        /*gulp.src([paths.build.scripts + swiper.filename + '.jquery.js'])
             .pipe(gulp.dest(paths.dist.scripts))
             .pipe(sourcemaps.init())
             .pipe(uglify())
@@ -231,7 +232,7 @@
             .pipe(rename(function(path) {
                 path.basename = swiper.filename + '.min';
             }))
-            .pipe(gulp.dest(paths.dist.styles));
+            .pipe(gulp.dest(paths.dist.styles));*/
     });
 
     gulp.task('watch', function () {
@@ -253,5 +254,5 @@
 
     gulp.task('server', [ 'watch', 'connect', 'open' ]);
 
-    gulp.task('default', [ 'server' ]);
+    gulp.task('default', [ 'build', 'dist' ]);
 })();

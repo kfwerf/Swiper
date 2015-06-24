@@ -1,14 +1,14 @@
 {
   "name": "swiper",
   "version": "3.0.8",
-  "description": "Most modern mobile touch slider and framework with hardware accelerated transitions",
-  "main": "dist/js/swiper.js",
+  "description": "iDangerous slider wrapped for isomorphic implementation",
+  "main": "index.min.js",
   "files": ["dist", "src", "*.json", "*.js"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nolimits4web/Swiper.git"
+    "url": "https://github.com/kfwerf/Swiper.git"
   },
-  "keywords": ["swiper", "swipe", "slider", "touch", "ios", "mobile", "cordova", "phonegap", "app", "framework", "carousel", "gallery"],
+  "keywords": ["swiper", "swipe", "slider", "touch", "ios", "mobile", "cordova", "phonegap", "app", "framework", "carousel", "gallery", "react", "isomorphic", "node"],
   "author": "Vladimir Kharlampidi",
   "license": [
     "MIT"
@@ -37,7 +37,7 @@
     "jshint-stylish": "~2.0.0"
   },
   "scripts": {
-    "test": "gulp build"
+    "test": "gulp"
   },
-  "style": "dist/css/swiper.css"
+  "style": "index.min.css"
 }

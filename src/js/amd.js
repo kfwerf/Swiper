@@ -1,13 +1,12 @@
-/*===========================
-Swiper AMD Export
-===========================*/
+Swiper.call(Swiper);
+
 if (typeof(module) !== 'undefined')
 {
-    module.exports = window.Swiper;
+    module.exports = Swiper;
 }
 else if (typeof define === 'function' && define.amd) {
     define([], function () {
         'use strict';
-        return window.Swiper;
+        return Swiper;
     });
 }

@@ -1,2 +1,2 @@
-(function () {
+var Swiper = function () {
     'use strict';

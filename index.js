@@ -10,9 +10,9 @@
  * 
  * Licensed under MIT
  * 
- * Released on: June 14, 2015
+ * Released on: June 24, 2015
  */
-(function () {
+var Swiper = function () {
     'use strict';
     /*===========================
     Swiper
@@ -3805,18 +3805,27 @@
         
     
 
-    window.Swiper = Swiper;
-})();
-/*===========================
-Swiper AMD Export
-===========================*/
+    return Swiper;
+};
+        if (typeof window === 'undefined') {
+          Swiper = function() {
+            'use strict';
+            return function() {
+            };
+          };
+        } else {
+          window.Swiper = Swiper;
+        }
+
+Swiper.call(Swiper);
+
 if (typeof(module) !== 'undefined')
 {
-    module.exports = window.Swiper;
+    module.exports = Swiper;
 }
 else if (typeof define === 'function' && define.amd) {
     define([], function () {
         'use strict';
-        return window.Swiper;
+        return Swiper;
     });
 }
